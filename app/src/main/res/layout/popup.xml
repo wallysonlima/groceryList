@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="25dp">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/enter_item"
+                android:textStyle="italic"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/groceryItem"
+                android:layout_below="@id/title"
+                android:layout_width="match_parent"
+                android:hint="@string/hint_item"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/groceryQty"
+                android:layout_below="@id/groceryItem"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:hint="@string/quantity_hint"
+                android:layout_height="wrap_content" />
+            
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save_title"
+                android:textStyle="bold"
+                android:background="@color/colorAccent"
+                android:layout_below="@id/groceryQty" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</android.support.constraint.ConstraintLayout>

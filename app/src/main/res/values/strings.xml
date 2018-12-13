@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">grocerylist</string>
     <string name="action_settings">Settings</string>
+    <string name="add_item">Add First Item</string>
+    <string name="enter_item">Enter Grocery Item</string>
+    <string name="hint_item">Enter Grocery</string>
+    <string name="quantity_hint">Quantity</string>
+    <string name="save_title">Save</string>
 </resources>
