@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -42,7 +43,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     // Add Grocery
     public void AddGrocery(Grocery grocery) {
+        SQLiteDatabase db = this.getWritableDatabase();
 
+        ContentValues values = new ContentValues();
+        values.put(Constants.KEY_GROCERY_ITEM, grocery.getName());
+        values.put(Constants.KEY_QTY_NUMBER, grocery.getQuantity());
+        values.put(Constants.KEY_DATE_NAME, java.lang.System.currentTimeMillis());
+
+        // insert the row
+        db.insert(Constants.TABLE_NAME, null, values);
+        Log.d("Saved!", "Saved to DB");
     }
 
     // Get a Grocery
