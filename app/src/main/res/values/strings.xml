@@ -6,4 +6,8 @@
     <string name="hint_item">Enter Grocery</string>
     <string name="quantity_hint">Quantity</string>
     <string name="save_title">Save</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="groceryname">Grocery Name</string>
+    <string name="qty">Qty</string>
+    <string name="date">Date:</string>
 </resources>
