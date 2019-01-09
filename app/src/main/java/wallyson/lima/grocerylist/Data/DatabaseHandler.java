@@ -24,10 +24,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String CREATE_GROCERY_TABLE = "CREATE TABLE " + Constants.TABLE_NAME + "("
-                + Constants.KEY_ID + " INTEGER PRIMARY KEY, " + Constants.KEY_GROCERY_ITEM + " TEXT, "
-                + Constants.KEY_QTY_NUMBER + "TEXT, "
+                + Constants.KEY_ID + " INTEGER PRIMARY KEY," + Constants.KEY_GROCERY_ITEM + " TEXT,"
+                + Constants.KEY_QTY_NUMBER + " TEXT,"
                 + Constants.KEY_DATE_NAME + " LONG);";
-
+        Log.d("Create", CREATE_GROCERY_TABLE);
         db.execSQL(CREATE_GROCERY_TABLE);
      }
 
@@ -42,7 +42,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
      */
 
     // Add Grocery
-    public void AddGrocery(Grocery grocery) {
+    public void addGrocery(Grocery grocery) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -56,7 +56,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     // Get a Grocery
-    private Grocery getGrocery(int id) {
+    public Grocery getGrocery(int id) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         Cursor cursor = db.query(Constants.TABLE_NAME, new String[] {Constants.KEY_ID,
