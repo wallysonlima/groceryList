@@ -1,6 +1,8 @@
 package wallyson.lima.grocerylist.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -102,7 +104,17 @@ public class  MainActivity extends AppCompatActivity {
 
         // Save to DB
         db.addGrocery(grocery);
+
         Snackbar.make(v, "Item Saved !", Snackbar.LENGTH_SHORT).show();
-        Log.d("Item Add ID: ", String.valueOf(db.getGroceriesCount()));
+
+        // Log.d("Item Add ID: ", String.valueOf(db.getGroceriesCount()));
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+                // start a new activity
+                startActivity(new Intent(MainActivity.this, ListActivity.class));
+            }
+        }, 1200);
     }
 }
