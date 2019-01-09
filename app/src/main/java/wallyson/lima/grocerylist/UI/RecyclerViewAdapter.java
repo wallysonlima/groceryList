@@ -44,7 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return 0;
+        return groceryItems.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -57,12 +57,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             context = ctx;
 
-            groceryItemName = (TextView) view.findViewById(R.id.name);
-            quantity = (TextView) view.findViewById(R.id.quantity);
-            dateAdded = (TextView) view.findViewById(R.id.dateAdded);
+            groceryItemName = view.findViewById(R.id.name);
+            quantity = view.findViewById(R.id.quantity);
+            dateAdded = view.findViewById(R.id.dateAdded);
 
-            editButton = (Button) view.findViewById(R.id.editButton);
-            deleteButton = (Button) view.findViewById(R.id.deleteButton);
+            editButton = view.findViewById(R.id.editButton);
+            deleteButton = view.findViewById(R.id.deleteButton);
 
             editButton.setOnClickListener(this);
             deleteButton.setOnClickListener(this);
