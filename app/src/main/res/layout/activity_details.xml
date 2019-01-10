@@ -62,8 +62,15 @@
                 <Button
                     android:id="@+id/editButtonDet"
                     android:layout_width="30dp"
+                    android:layout_marginRight="15dp"
                     android:layout_height="30dp"
                     android:background="@android:drawable/ic_menu_edit" />
+
+                <Button
+                    android:id="@+id/deleteButtonDet"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:drawable/ic_delete" />
             </TableRow>
         </RelativeLayout>
 

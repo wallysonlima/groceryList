@@ -10,4 +10,7 @@
     <string name="groceryname">Grocery Name</string>
     <string name="qty">Qty</string>
     <string name="date">Date:</string>
+    <string name="sure">Are You Sure ?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
 </resources>
